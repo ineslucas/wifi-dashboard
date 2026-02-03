@@ -1,19 +1,41 @@
-<!-- Set up based on https://github.com/tigoe/html-for-conndev/blob/main/DeviceDataDashboard/dashboard/script.js -->
-
-<!-- https://tigoe.github.io/html-for-conndev/DeviceDataDashboard/ -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js"></script>
+  <title>Accelerometer Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <title>Readings</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-  <h1>Sensor Readings</h1>
-  <div id="result">Waiting for the log.json file to load...</div>
+  <h1>Accelerometer Dashboard</h1>
+
+  <div class="dashboard">
+    <!-- Panel 1: Raw Data -->
+    <div class="panel">
+      <h2>Raw Data</h2>
+      <div id="raw-data" class="panel-content">
+        Waiting for data...
+      </div>
+    </div>
+
+    <!-- Panel 2: 3D Visualization -->
+    <div class="panel">
+      <h2>3D Path Visualization</h2>
+      <div id="canvas-container" class="panel-content">
+      </div>
+    </div>
+
+    <!-- Panel 3: Placeholder -->
+    <div class="panel">
+      <h2>Coming Soon</h2>
+      <div id="placeholder" class="panel-content">
+        <p>Future visualization will appear here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
