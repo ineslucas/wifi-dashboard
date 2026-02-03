@@ -32,7 +32,7 @@ WiFiClient client;
 const char server[] = "192.168.1.96"; // 0.0.0.0
 const int portNum = 8080;
 // change this to a unique name for the device:
-String deviceName = "ArduinoNano33IoT";
+String deviceName = "ArduinoIoT";
 // message sending interval, in ms:
 int interval = 5000;
 // last time a message was sent, in ms:

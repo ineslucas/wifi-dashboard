@@ -7,31 +7,40 @@
   <title>Accelerometer Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
 </head>
 <body>
-  <h1>Accelerometer Dashboard</h1>
+  <h1>Speedy Dashboard</h1>
 
   <div class="dashboard">
-    <!-- Panel 1: Raw Data -->
-    <div class="panel">
-      <h2>Raw Data</h2>
-      <div id="raw-data" class="panel-content">
-        Waiting for data...
+    <!-- Left Column: Panels 1 & 2 stacked -->
+    <div class="left-column">
+      <!-- Panel 1: Raw Data -->
+      <div class="panel panel-small">
+        <h2>Raw Data</h2>
+        <div id="raw-data" class="panel-content">
+          Waiting for data...
+        </div>
+      </div>
+
+      <!-- Panel 2: 3D Visualization -->
+      <div class="panel panel-large">
+        <div class="panel-header">
+          <h2>3D Path</h2>
+          <div class="toggle-container">
+            <span>Auto-rotate</span>
+            <div id="animation-toggle" class="toggle"></div>
+          </div>
+        </div>
+        <div id="canvas-container" class="panel-content"></div>
       </div>
     </div>
 
-    <!-- Panel 2: 3D Visualization -->
-    <div class="panel">
-      <h2>3D Path Visualization</h2>
-      <div id="canvas-container" class="panel-content">
-      </div>
-    </div>
-
-    <!-- Panel 3: Placeholder -->
-    <div class="panel">
-      <h2>Coming Soon</h2>
-      <div id="placeholder" class="panel-content">
-        <p>Future visualization will appear here.</p>
+    <!-- Right Column: Panel 3 -->
+    <div class="right-column">
+      <div class="panel panel-full">
+        <div id="matter-container" class="panel-content"></div>
       </div>
     </div>
   </div>
